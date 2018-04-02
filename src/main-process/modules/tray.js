@@ -26,7 +26,7 @@ class TrayModule extends ModuleWindow {
     const appRoot = path.resolve(__dirname, '../../..'); // Maybe a better way to know this?
     const logosPath = path.join(appRoot, 'src', 'images', 'logos');
     const trayIcons = {
-      'tray': nativeImage.createFromPath(path.join(logosPath, 'museeks-tray.png')).resize({ width: 24, height: 24 }),
+      'tray': nativeImage.createFromPath(path.join(logosPath, 'museeks-tray.png')),
       'tray-win32': nativeImage.createFromPath(path.join(logosPath, 'museeks-tray.ico')),
       'tray-darwin-dark': nativeImage.createFromPath(path.join(logosPath, 'museeks-tray-dark.png')),
     };
