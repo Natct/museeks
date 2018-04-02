@@ -4,7 +4,7 @@
 
 const os = require('os');
 const path = require('path');
-const { Tray, Menu, app, ipcMain, nativeImage } = require('electron');
+const { Tray, Menu, app, ipcMain } = require('electron');
 
 const ModuleWindow = require('./module-window');
 const { IPCR_PLAYER_ACTION } = require('../../shared/constants/ipc');
@@ -26,9 +26,9 @@ class TrayModule extends ModuleWindow {
     const appRoot = path.resolve(__dirname, '../../..'); // Maybe a better way to know this?
     const logosPath = path.join(appRoot, 'src', 'images', 'logos');
     const trayIcons = {
-      'tray': nativeImage.createFromPath(path.join(logosPath, 'museeks-tray.png')),
-      'tray-win32': nativeImage.createFromPath(path.join(logosPath, 'museeks-tray.ico')),
-      'tray-darwin-dark': nativeImage.createFromPath(path.join(logosPath, 'museeks-tray-dark.png')),
+      'tray': path.join(logosPath, 'museeks-tray.png'),
+      'tray-win32': path.join(logosPath, 'museeks-tray.ico'),
+      'tray-darwin-dark': path.join(logosPath, 'museeks-tray-dark.png'),
     };
 
     // Make it "lightable" on macOS
