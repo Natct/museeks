@@ -4,7 +4,8 @@
       "targets": { "chrome": 58 },
       "useBuiltIns": true
     }],
-    "react"
+    "react",
+    "flow"
   ],
   "plugins": [
     "transform-class-properties",
